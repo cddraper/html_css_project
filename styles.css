@@ -27,3 +27,11 @@ img {
     transform: rotate(90deg);
     margin: 40px 3px 40px -40px;
 }
+
+.border {
+    border-bottom: 2px solid hsl(1,10%,90%);
+    margin-left: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 365px;
+}

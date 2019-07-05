@@ -1,3 +1,29 @@
-h2 {
-    color: red;
+body {
+   font-family: Nunito, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    border: 2px solid lightgray;
+    width: 200px;
+    border-radius: 10% 20%;
+    background: hsla(150,100%,50%,0.2);
+    border-bottom: 2px solid lightgrey;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+img {
+    width: 350px;
+    height: auto;
+    border: 5px solid hsl(250,60%,90%);
+    margin: 3px;
+    padding: 3px;
+}
+
+#glassbridge {
+    transform: rotate(90deg);
+    margin: 40px 3px 40px -40px;
 }

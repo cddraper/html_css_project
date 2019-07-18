@@ -1,0 +1,235 @@
+body {
+   font-family: Nunito, Helvetica, sans-serif;
+   background: hsl(250,100%,97%);
+   max-width: 1000px;
+   margin: 0 1em 0 1em;
+   }
+
+h1 {
+    text-align: center;
+    border: 2px solid rgb(113, 92, 168);
+    width: 200px;
+    margin-left: 60px;
+    border-radius: 10% 20%;
+    background: hsla(180,100%,50%,0.2); 
+}
+
+h2 {
+    margin-top: 130px;
+}
+
+/* from Youtube navigation tutorial */
+
+header {
+    background: lightgray;
+    text-align: center;
+    position: fixed; 
+    top: 1em;
+    margin: 0;
+    width: 97%;
+    z-index: 999;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: lightgray;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 30ms;
+}
+
+.nav-toggle { 
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+@media screen and (min-width: 600px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px,1fr) 1fr;
+
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    h1 {
+        grid-column: 2 / 3;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 3px;
+        background: white;
+        position: absolute;
+        top: -.50em;
+        left: 0;
+        right: 0;
+        transform: scale(0,1);
+        transition: transform ease-in-out 200ms;
+
+    }
+
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: middle;
+    }
+}
+
+/* from Youtube navigation tutorial */
+
+h3 {
+    font-size: 1em;
+}
+
+img {
+    border: 5px solid hsl(250,50%,80%);
+    margin: 3px;
+    padding: 3px;
+}
+
+.vertimg {
+    max-width: 300px;
+    max-height: 400px;
+}
+
+.horizimg {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+#glassbridge {
+    transform: rotate(90deg);
+    margin-top: 53px;
+    margin-left: -47px;
+    margin-bottom: 53px;
+}
+
+.border {
+    border-bottom: 2px solid hsl(1,10%,90%);
+    margin-left: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 365px;
+}
+
+.beijingbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.hunanbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.left {
+    justify-self: center;
+}
+
+.shanghaibox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

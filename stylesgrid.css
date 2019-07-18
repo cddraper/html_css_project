@@ -1,7 +1,7 @@
 body {
    font-family: Nunito, Helvetica, sans-serif;
    background: hsl(250,100%,97%);
-   max-width: 1000px;
+   max-width: 97%;
    margin: 0 1em 0 1em;
    }
 
@@ -18,7 +18,7 @@ h2 {
     margin-top: 130px;
 }
 
-/* from Youtube navigation tutorial */
+/* START from Youtube navigation tutorial */
 
 header {
     background: lightgray;
@@ -115,14 +115,15 @@ nav a:hover {
     top: 7px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) {
     .nav-toggle-label {
         display: none;
     }
 
     header {
         display: grid;
-        grid-template-columns: 1fr auto minmax(600px,1fr) 1fr;
+        grid-template-columns: 1fr 1fr 2fr 1fr;
+        max-width: 100%;
 
     }
 
@@ -132,12 +133,6 @@ nav a:hover {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
-
-    h1 {
-        grid-column: 2 / 3;
-        display: flex;
-        justify-content: flex-start;
     }
 
     nav a {
@@ -176,7 +171,7 @@ nav a:hover {
     }
 }
 
-/* from Youtube navigation tutorial */
+/* END from Youtube navigation tutorial */
 
 h3 {
     font-size: 1em;
